@@ -16,9 +16,9 @@ namespace CSharp8.NewFeature.UsingAndStatic
             var fileName = "abcd.json";
             if (fileName != null)
             {
-                var fileStream1 = new FileStream(fileName, FileMode.Open);
-                var fileStream2 = new FileStream(fileName, FileMode.Open);
-                var fileStream3 = new FileStream(fileName, FileMode.Open);
+                using var fileStream1 = new FileStream(fileName, FileMode.Open);
+                using var fileStream2 = new FileStream(fileName, FileMode.Open);
+                using var fileStream3 = new FileStream(fileName, FileMode.Open);
 
                 //do somthing here
 
